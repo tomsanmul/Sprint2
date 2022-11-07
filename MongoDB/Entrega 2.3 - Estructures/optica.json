@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "6367bbe9f2c58dc3f508617b"
+  },
+  "Nom": "Javier Ramirez",
+  "Adreça": "Sicilia 320, Pral 2",
+  "Ciutat": "Barcelona",
+  "Pais": "España",
+  "Telefon": "684563574",
+  "Fax": "",
+  "NIF": "46247583T",
+  "Referit": "",
+  "Compres": [
+    {
+      "data": {
+        "$date": {
+          "$numberLong": "1665964800000"
+        }
+      },
+      "Empleat": "Laia Vivies"
+    }
+  ]
+}]

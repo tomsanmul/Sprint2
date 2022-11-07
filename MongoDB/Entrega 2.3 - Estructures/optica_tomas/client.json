@@ -23,10 +23,12 @@
         {
           "id_ulleres": {
             "$oid": "100000000000000000000002"
-          }
+          },
+          "Quantitat": 1
         }
       ],
-      "Empleat": "Laia Vivies"
+      "Empleat": "Laia Vivies",
+      "PreuTotal": 75
     },
     {
       "data": {
@@ -40,10 +42,12 @@
         {
           "id_ulleres": {
             "$oid": "100000000000000000000004"
-          }
+          },
+          "Quantitat": 1
         }
       ],
-      "Empleat": "Alicia Sanchez"
+      "Empleat": "Alicia Sanchez",
+      "PreuTotal": 90.45
     }
   ]
 },{
@@ -71,10 +75,12 @@
         {
           "id_ulleres": {
             "$oid": "100000000000000000000004"
-          }
+          },
+          "Quantitat": 1
         }
       ],
-      "Empleat": "Laia Vivies"
+      "Empleat": "Laia Vivies",
+      "PreuTotal": 90.45
     }
   ]
 },{
@@ -102,10 +108,12 @@
         {
           "id_ulleres": {
             "$oid": "100000000000000000000001"
-          }
+          },
+          "Quantitat": 1
         }
       ],
-      "Empleat": "Alicia Sanchez"
+      "Empleat": "Alicia Sanchez",
+      "PreuTotal": 60.5
     }
   ]
 },{
@@ -133,10 +141,12 @@
         {
           "id_ulleres": {
             "$oid": "100000000000000000000003"
-          }
+          },
+          "Quantitat": 1
         }
       ],
-      "Empleat": "Carlos Martinez"
+      "Empleat": "Carlos Martinez",
+      "PreuTotal": 80
     }
   ]
 },{

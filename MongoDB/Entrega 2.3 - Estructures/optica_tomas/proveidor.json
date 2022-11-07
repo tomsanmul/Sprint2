@@ -20,7 +20,8 @@
       "Montura": "flotant",
       "ColorMontura": "blau",
       "ColorVidreDret": "verd",
-      "ColorVidreEsquerra": "verd"
+      "ColorVidreEsquerra": "verd",
+      "Preu": 60.5
     },
     {
       "id": {
@@ -32,7 +33,8 @@
       "Montura": "Metàl.lica",
       "ColorMontura": "vermell",
       "ColorVidreDret": "blau",
-      "ColorVidreEsquerra": "blau"
+      "ColorVidreEsquerra": "blau",
+      "Preu": 80
     }
   ]
 },{
@@ -57,7 +59,8 @@
       "Montura": "flotant",
       "ColorMontura": "negre",
       "ColorVidreDret": "groc",
-      "ColorVidreEsquerra": "groc"
+      "ColorVidreEsquerra": "groc",
+      "Preu": 90.45
     },
     {
       "id": {
@@ -69,7 +72,8 @@
       "Montura": "pasta",
       "ColorMontura": "blanc",
       "ColorVidreDret": "lila",
-      "ColorVidreEsquerra": "lila"
+      "ColorVidreEsquerra": "lila",
+      "Preu": 70.25
     }
   ]
 },{
@@ -94,7 +98,8 @@
       "Montura": "pasta",
       "ColorMontura": "negre",
       "ColorVidreDret": "vermell",
-      "ColorVidreEsquerra": "vermell"
+      "ColorVidreEsquerra": "vermell",
+      "Preu": 75
     }
   ]
 }]

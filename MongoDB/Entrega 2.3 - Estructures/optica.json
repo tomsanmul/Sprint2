@@ -13,11 +13,30 @@
   "Compres": [
     {
       "data": {
-        "$date": {
-          "$numberLong": "1665964800000"
+        "date": {
+          "$date": "2022-10-17T18:30:54Z"
         }
       },
+      "ulleres_id": [
+          {
+            "id_ulleres": "id 2"
+          }
+      ],
       "Empleat": "Laia Vivies"
+    },
+    {
+      "data": {
+        "date": {
+          "$date": "2022-10-19T12:34:26Z"
+        }
+      },
+      "ulleres_id": [
+          {
+            "id_ulleres": "id 4"
+          }
+      ],
+      "Empleat": "Alicia Sanchez"
     }
+
   ]
 }]

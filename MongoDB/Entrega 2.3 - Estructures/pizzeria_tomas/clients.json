@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "6368e8625527b3f54e2e5e3f"
+  },
+  "Nom": "Tomas",
+  "Cognoms": "Sans Mulero",
+  "Adreça": "Gran Via 435, 2-2",
+  "CP": "08012",
+  "Localitat": "Barcelona",
+  "Provincia": "Barcelona",
+  "Telefon": "684563574",
+  "Comandes": "[\n    {\n        \"comanda_id\": \"co0000000000000000000001\",\n        \"data\": {\n            \"date\": \"2022-10-17T18:30:54.000Z\"\n        },\n        \"productes\": [\n            {\n                \"producte_Id\": \"pr0000000000000000000001\",\n                \"quantitat\": \"1\",\n                \"preu\": 10\n            },\n            {\n                \"producte_Id\": \"pr0000000000000000000004\",\n                \"quantitat\": \"2\",\n                \"preu\": 6\n            },\n            {\n                \"producte_Id\": \"pr0000000000000000000006\",\n                \"quantitat\": \"1\",\n                \"preu\": 6\n            }\n        ],\n        \"PreuTotal\": \"22\",\n        \"Tipus_Entrega\": \"botiga\",\n        \"botiga_id\": \"bo0000000000000000000001\",\n        \"Empleat\": \"Javier Miranda Vivies\"\n    }\n]"
+},{
+  "_id": {
+    "$oid": "6368f77e5527b3f54e2e5e58"
+  },
+  "Nom": "Marta",
+  "Cognoms": "Valdesca Perez",
+  "Adreça": "Sicilia 89, Pral 2",
+  "CP": "08013",
+  "Localitat": "Barcelona",
+  "Provincia": "Barcelona",
+  "Telefon": "687698766",
+  "Comandes": "[\n    {\n        \"comanda_id\": \"co0000000000000000000002\",\n        \"data\": {\n            \"date\": \"2022-10-17T18:30:54.000Z\"\n        },\n        \"productes\": [\n            {\n                \"producte_Id\": \"pr0000000000000000000003\",\n                \"quantitat\": \"1\",\n                \"preu\": 10\n            },\n            {\n                \"producte_Id\": \"pr0000000000000000000004\",\n                \"quantitat\": \"1\",\n                \"preu\": 3\n            }\n        ],\n        \"PreuTotal\": \"13\",\n        \"Tipus_Entrega\": \"repartiment\",\n        \"botiga_id\": \"bo0000000000000000000001\",\n        \"Empleat\": \"Toni Setmenat Turró\"\n    }\n]"
+}]

@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "6368c88d5527b3f54e2e5dd4"
+  },
+  "Nom": "Solvia S.L.",
+  "Adreça": "c/ Mart 34, Bj",
+  "CP": "0802",
+  "Ciutat": "Barcelona",
+  "Teleon": "937365467",
+  "Fax": "687353276",
+  "Nif": "56436532T",
+  "ulleres": [
+    {
+      "id": {
+        "$oid": "100000000000000000000001"
+      },
+      "Marca": "Ray-ban",
+      "GraduacioVidreDret": "2",
+      "GraduacioVidreEsquerre": "2",
+      "Montura": "flotant",
+      "ColorMontura": "blau",
+      "ColorVidreDret": "verd",
+      "ColorVidreEsquerra": "verd"
+    },
+    {
+      "id": {
+        "$oid": "100000000000000000000003"
+      },
+      "Marca": "Ray-ban",
+      "GraduacioVidreDret": "2",
+      "GraduacioVidreEsquerre": "2",
+      "Montura": "Metàl.lica",
+      "ColorMontura": "vermell",
+      "ColorVidreDret": "blau",
+      "ColorVidreEsquerra": "blau"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6368ca625527b3f54e2e5dd9"
+  },
+  "Nom": "MaxiGafas S.L.",
+  "Adreça": "c/ Maresme 22, (Local)",
+  "CP": "08019",
+  "Ciutat": "Barcelona",
+  "Teleon": "938354678",
+  "Fax": "667884332",
+  "Nif": "58336543R",
+  "ulleres": [
+    {
+      "id": {
+        "$oid": "100000000000000000000004"
+      },
+      "Marca": "Polaroid",
+      "GraduacioVidreDret": "1",
+      "GraduacioVidreEsquerre": "1",
+      "Montura": "flotant",
+      "ColorMontura": "negre",
+      "ColorVidreDret": "groc",
+      "ColorVidreEsquerra": "groc"
+    },
+    {
+      "id": {
+        "$oid": "100000000000000000000005"
+      },
+      "Marca": "Polaro",
+      "GraduacioVidreDret": "2",
+      "GraduacioVidreEsquerre": "2",
+      "Montura": "pasta",
+      "ColorMontura": "blanc",
+      "ColorVidreDret": "lila",
+      "ColorVidreEsquerra": "lila"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6368cbca5527b3f54e2e5ddb"
+  },
+  "Nom": "TodoGafas S.L.",
+  "Adreça": "c/ Girona 34, Bj",
+  "CP": "08013",
+  "Ciutat": "Barcelona",
+  "Teleon": "938674632",
+  "Fax": "937785343",
+  "Nif": "46376557A",
+  "ulleres": [
+    {
+      "id": {
+        "$oid": "100000000000000000000002"
+      },
+      "Marca": "Oakley",
+      "GraduacioVidreDret": "1",
+      "GraduacioVidreEsquerre": "1",
+      "Montura": "pasta",
+      "ColorMontura": "negre",
+      "ColorVidreDret": "vermell",
+      "ColorVidreEsquerra": "vermell"
+    }
+  ]
+}]

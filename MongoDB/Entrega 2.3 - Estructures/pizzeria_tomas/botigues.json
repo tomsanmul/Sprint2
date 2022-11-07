@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "6368fc4a4cf7f11dd8fe4ea9"
+  },
+  "Nom": "Pi",
+  "Adreça": "Pi i Maragall 34",
+  "CP": "08012",
+  "Localitat": "Barcelona",
+  "Provincia": "Barcelona",
+  "Empleats": [
+    {
+      "Nom": "Javier",
+      "Cognmos": "Miranda Vives",
+      "NIF": "34675887E",
+      "Telefon": "674476632",
+      "Tipus": "PersonaldeBotiga"
+    },
+    {
+      "Nom": "Jordi",
+      "Cognmos": "Giralt Franc",
+      "NIF": "43675476R",
+      "Telefon": "675887434",
+      "Tipus": "GerentBotiga"
+    },
+    {
+      "Nom": "Tomas",
+      "Cognmos": "Sanchez Martinez",
+      "NIF": "46757445A",
+      "Telefon": "756574463",
+      "Tipus": "Cuiner"
+    }
+  ]
+}]

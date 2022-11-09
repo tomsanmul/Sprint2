@@ -1,33 +1,192 @@
-[{
-  "_id": {
-    "$oid": "6368fc4a4cf7f11dd8fe4ea9"
+[
+  {
+    "botiga_id": {
+      "$oid": "300000000000000000000001"
+    },
+    "Nom": "Pi",
+    "Adreça": "Pi i Maragall 34",
+    "CP": "08012",
+    "Localitat": "Barcelona",
+    "Provincia": "Barcelona",
+    "Empleats": [
+      {
+        "empleat_id": {
+          "$oid": "400000000000000000000001"
+        },
+        "Nom": "Javier",
+        "Cognmos": "Miranda Vives",
+        "NIF": "34675887E",
+        "Telefon": "674476632",
+        "Tipus": "PersonaldeBotiga"
+      },
+      {
+        "empleat_id": {
+          "$oid": "400000000000000000000002"
+        },
+        "Nom": "Jordi",
+        "Cognmos": "Giralt Franc",
+        "NIF": "43675476R",
+        "Telefon": "675887434",
+        "Tipus": "GerentBotiga"
+      },
+      {
+        "empleat_id": {
+          "$oid": "400000000000000000000003"
+        },
+        "Nom": "Tomas",
+        "Cognmos": "Sanchez Martinez",
+        "NIF": "46757445A",
+        "Telefon": "756574463",
+        "Tipus": "Cuiner"
+      },
+      {
+        "empleat_id": {
+          "$oid": "400000000000000000000004"
+        },
+        "Nom": "Toni",
+        "Cognmos": "Setmenat Turró",
+        "NIF": "37645647Y",
+        "Telefon": "668754733",
+        "Tipus": "Repartidor"
+      },
+      {
+        "empleat_id": {
+          "$oid": "400000000000000000000005"
+        },
+        "Nom": "Miquel",
+        "Cognmos": "Serrat Galdós",
+        "NIF": "475665745F",
+        "Telefon": "678677867",
+        "Tipus": "Repartidor"
+      }
+    ]
   },
-  "Nom": "Pi",
-  "Adreça": "Pi i Maragall 34",
-  "CP": "08012",
-  "Localitat": "Barcelona",
-  "Provincia": "Barcelona",
-  "Empleats": [
-    {
-      "Nom": "Javier",
-      "Cognmos": "Miranda Vives",
-      "NIF": "34675887E",
-      "Telefon": "674476632",
-      "Tipus": "PersonaldeBotiga"
+  {
+    "botiga_id": {
+      "$oid": "300000000000000000000002"
     },
-    {
-      "Nom": "Jordi",
-      "Cognmos": "Giralt Franc",
-      "NIF": "43675476R",
-      "Telefon": "675887434",
-      "Tipus": "GerentBotiga"
+    "Nom": "Sardenya",
+    "Adreça": "Sardenya 234",
+    "CP": "08013",
+    "Localitat": "Barcelona",
+    "Provincia": "Barcelona",
+    "Empleats": [
+      {
+        "empleat_id": {
+          "$oid": "400000000000000000000006"
+        },
+        "Nom": "Santi",
+        "Cognmos": "Santillana Mir",
+        "NIF": "12653465D",
+        "Telefon": "667785544",
+        "Tipus": "PersonaldeBotiga"
+      },
+      {
+        "empleat_id": {
+          "$oid": "400000000000000000000007"
+        },
+        "Nom": "Marc",
+        "Cognmos": "Sans Baró",
+        "NIF": "276t64577A",
+        "Telefon": "644789435",
+        "Tipus": "PersonaldeBotiga"
+      },
+      {
+        "empleat_id": {
+          "$oid": "400000000000000000000008"
+        },
+        "Nom": "Ramon",
+        "Cognmos": "Fernandez Pena",
+        "NIF": "463766332K",
+        "Telefon": "714367587",
+        "Tipus": "GerentBotiga"
+      },
+      {
+        "empleat_id": {
+          "$oid": "400000000000000000000009"
+        },
+        "Nom": "Merche",
+        "Cognmos": "Ruiz Mesa",
+        "NIF": "346856574F",
+        "Telefon": "678456767",
+        "Tipus": "Cuiner"
+      },
+      {
+        "empleat_id": {
+          "$oid": "400000000000000000000010"
+        },
+        "Nom": "David",
+        "Cognmos": "Rodriguez Perez",
+        "NIF": "374576547D",
+        "Telefon": "666777444",
+        "Tipus": "Repartidor"
+      }
+    ]
+  },
+  {
+    "botiga_id": {
+      "$oid": "300000000000000000000003"
     },
-    {
-      "Nom": "Tomas",
-      "Cognmos": "Sanchez Martinez",
-      "NIF": "46757445A",
-      "Telefon": "756574463",
-      "Tipus": "Cuiner"
-    }
-  ]
-}]
+    "Nom": "Paris",
+    "Adreça": "Paris 102",
+    "CP": "08014",
+    "Localitat": "Barcelona",
+    "Provincia": "Barcelona",
+    "Empleats": []
+  },
+  {
+    "botiga_id": {
+      "$oid": "300000000000000000000004"
+    },
+    "Nom": "Rambla",
+    "Adreça": "Rambla de Catalunya 4",
+    "CP": "08009",
+    "Localitat": "Barcelona",
+    "Provincia": "Barcelona",
+    "Empleats": []
+  },
+  {
+    "botiga_id": {
+      "$oid": "300000000000000000000005"
+    },
+    "Nom": "Gran",
+    "Adreça": "Gran de Gracia 45",
+    "CP": "08011",
+    "Localitat": "Badalona",
+    "Provincia": "Barcelona",
+    "Empleats": []
+  },
+  {
+    "botiga_id": {
+      "$oid": "300000000000000000000006"
+    },
+    "Nom": "Napols",
+    "Adreça": "Napols 86",
+    "CP": "08028",
+    "Localitat": "SantaColoma",
+    "Provincia": "Barcelona",
+    "Empleats": []
+  },
+  {
+    "botiga_id": {
+      "$oid": "300000000000000000000007"
+    },
+    "Nom": "Carrilet",
+    "Adreça": "Av. Carrilet 44",
+    "CP": "08032",
+    "Localitat": "Hospitalet",
+    "Provincia": "Barcelona",
+    "Empleats": []
+  },
+  {
+    "botiga_id": {
+      "$oid": "300000000000000000000008"
+    },
+    "Nom": "Cerdanyola",
+    "Adreça": "Altimira 34",
+    "CP": "08044",
+    "Localitat": "Cerdanyola del Valles ",
+    "Provincia": "Barcelona",
+    "Empleats": []
+  }
+]

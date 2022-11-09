@@ -1,265 +1,272 @@
-[{
-  "_id": {
-    "$oid": "100000000000000000000001"
-  },
-  "Nom": "Tomas",
-  "Cognoms": "Sans Mulero",
-  "Adreça": "Gran Via 435, 2-2",
-  "CP": "08012",
-  "Localitat": "Barcelona",
-  "Provincia": "Barcelona",
-  "Telefon": "684563574",
-  "Comandes": [
-    {
-      "Comanda_ID": {
-        "$oid": "200000000000000000000001"
-      },
-      "Botiga_ID": {
-        "$oid": "300000000000000000000001"
-      },
-      "Data": {
-        "$date": {
-          "$numberLong": "1666201513000"
-        }
-      },
-      "PreuTotal": 22,
-      "empleat_ID": {
-        "$oid": "400000000000000000000001"
-      },
-      "TipusEntrega": "botiga",
-      "DetallComanda": [
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000001"
-          },
-          "Quantitat": 1
+[
+  {
+    "client_id": {
+      "$oid": "100000000000000000000001"
+    },
+    "Nom": "Tomas",
+    "Cognoms": "Sans Mulero",
+    "Adreça": "Gran Via 435, 2-2",
+    "CP": "08012",
+    "Localitat": "Barcelona",
+    "Provincia": "Barcelona",
+    "Telefon": "684563574",
+    "Comandes": [
+      {
+        "comanda_id": {
+          "$oid": "200000000000000000000001"
         },
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000004"
-          },
-          "Quantitat": 2
+        "botiga_id": {
+          "$oid": "300000000000000000000001"
         },
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000006"
-          },
-          "Quantitat": 1
-        }
-      ]
-    }
-  ]
-},{
-  "_id": {
-    "$oid": "100000000000000000000002"
-  },
-  "Nom": "Marta",
-  "Cognoms": "Valdesca Perez",
-  "Adreça": "Sicilia 89, Pral 2",
-  "CP": "08013",
-  "Localitat": "Barcelona",
-  "Provincia": "Barcelona",
-  "Telefon": "687698766",
-  "Comandes": [
-    {
-      "Comanda_ID": {
-        "$oid": "200000000000000000000002"
-      },
-      "Botiga_ID": {
-        "$oid": "300000000000000000000001"
-      },
-      "Data": {
-        "$date": {
-          "$numberLong": "1666380851000"
-        }
-      },
-      "PreuTotal": 13,
-      "empleat_ID": {
-        "$oid": "400000000000000000000004"
-      },
-      "TipusEntrega": "repartiment",
-      "Productes": [
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000003"
-          },
-          "Quantitat": 1
+        "Data": {
+          "$date": {
+            "$numberLong": "1666201513000"
+          }
         },
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000004"
-          },
-          "Quantitat": 1
-        }
-      ]
-    }
-  ]
-},{
-  "_id": {
-    "$oid": "100000000000000000000003"
-  },
-  "Nom": "Agata",
-  "Cognoms": "Ruiz Prada",
-  "Adreça": "Bruc 45, 4-5",
-  "CP": "08014",
-  "Localitat": "Barcelona",
-  "Provincia": "Barcelona",
-  "Telefon": "666777888",
-  "Comandes": [
-    {
-      "Comanda_ID": {
-        "$oid": "200000000000000000000004"
-      },
-      "Botiga_ID": {
-        "$oid": "300000000000000000000002"
-      },
-      "Data": {
-        "$date": {
-          "$numberLong": "1666448592000"
-        }
-      },
-      "PreuTotal": 11,
-      "empleat_ID": {
-        "$oid": "400000000000000000000006"
-      },
-      "TipusEntrega": "botiga",
-      "Productes": [
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000002"
-          },
-          "Quantitat": 1
-        }
-      ]
-    }
-  ]
-},{
-  "_id": {
-    "$oid": "100000000000000000000004"
-  },
-  "Nom": "Angel",
-  "Cognoms": "Galera Fernandez",
-  "Adreça": "Girona 34, 4-5",
-  "CP": "08015",
-  "Localitat": "Barcelona",
-  "Provincia": "Barcelona",
-  "Telefon": "756999787",
-  "Comandes": [
-    {
-      "Comanda_ID": {
-        "$oid": "200000000000000000000005"
-      },
-      "Botiga_ID": {
-        "$oid": "300000000000000000000001"
-      },
-      "Data": {
-        "$date": {
-          "$numberLong": "1666269263000"
-        }
-      },
-      "PreuTotal": 10,
-      "empleat_ID": {
-        "$oid": "400000000000000000000001"
-      },
-      "TipusEntrega": "botiga",
-      "Productes": [
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000001"
-          },
-          "Quantitat": 1
-        }
-      ]
-    }
-  ]
-},{
-  "_id": {
-    "$oid": "100000000000000000000005"
-  },
-  "Nom": "Sonia",
-  "Cognoms": "Vazquez",
-  "Adreça": "Napoles 33, 2-1",
-  "CP": "08029",
-  "Localitat": "Santa Coloma de Gramanet",
-  "Provincia": "Barcelona",
-  "Telefon": "648111222",
-  "Comandes": [
-    {
-      "Comanda_ID": {
-        "$oid": "200000000000000000000003"
-      },
-      "Botiga_ID": {
-        "$oid": "300000000000000000000001"
-      },
-      "Data": {
-        "$date": {
-          "$numberLong": "1666267502000"
-        }
-      },
-      "PreuTotal": 31,
-      "empleat_ID": {
-        "$oid": "400000000000000000000004"
-      },
-      "TipusEntrega": "repartiment",
-      "Productes": [
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000002"
-          },
-          "Quantitat": 1
+        "PreuTotal": 22,
+        "empleat_id": {
+          "$oid": "400000000000000000000001"
         },
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000005"
+        "TipusEntrega": "botiga",
+        "DetallComanda": [
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000001"
+            },
+            "Quantitat": 1
           },
-          "Quantitat": 1
-        },
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000007"
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000004"
+            },
+            "Quantitat": 2
           },
-          "Quantitat": 2
-        }
-      ]
-    }
-  ]
-},{
-  "_id": {
-    "$oid": "100000000000000000000006"
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000006"
+            },
+            "Quantitat": 1
+          }
+        ]
+      }
+    ]
   },
-  "Nom": "Ramon",
-  "Cognoms": "Turró Santana",
-  "Adreça": "Foc 45, 1-1",
-  "CP": "08033",
-  "Localitat": "Hospitalet",
-  "Provincia": "Barcelona",
-  "Telefon": "677446553",
-  "Comandes": [
-    {
-      "Comanda_ID": {
-        "$oid": "200000000000000000000006"
-      },
-      "Botiga_ID": {
-        "$oid": "300000000000000000000002"
-      },
-      "Data": {
-        "$date": {
-          "$numberLong": "1666205077000"
-        }
-      },
-      "PreuTotal": 6,
-      "empleat_ID": {
-        "$oid": "400000000000000000000010"
-      },
-      "TipusEntrega": "repartiment",
-      "Productes": [
-        {
-          "Producte_ID": {
-            "$oid": "500000000000000000000006"
+  {
+    "client_id": {
+      "$oid": "100000000000000000000002"
+    },
+    "Nom": "Marta",
+    "Cognoms": "Valdesca Perez",
+    "Adreça": "Sicilia 89, Pral 2",
+    "CP": "08013",
+    "Localitat": "Barcelona",
+    "Provincia": "Barcelona",
+    "Telefon": "687698766",
+    "Comandes": [
+      {
+        "comanda_id": {
+          "$oid": "200000000000000000000002"
+        },
+        "botiga_id": {
+          "$oid": "300000000000000000000001"
+        },
+        "Data": {
+          "$date": {
+            "$numberLong": "1666380851000"
+          }
+        },
+        "PreuTotal": 13,
+        "empleat_id": {
+          "$oid": "400000000000000000000004"
+        },
+        "TipusEntrega": "repartiment",
+        "Productes": [
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000003"
+            },
+            "Quantitat": 1
           },
-          "Quantitat": 1
-        }
-      ]
-    }
-  ]
-}]
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000004"
+            },
+            "Quantitat": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "client_id": {
+      "$oid": "100000000000000000000003"
+    },
+    "Nom": "Agata",
+    "Cognoms": "Ruiz Prada",
+    "Adreça": "Bruc 45, 4-5",
+    "CP": "08014",
+    "Localitat": "Barcelona",
+    "Provincia": "Barcelona",
+    "Telefon": "666777888",
+    "Comandes": [
+      {
+        "comanda_id": {
+          "$oid": "200000000000000000000004"
+        },
+        "botiga_id": {
+          "$oid": "300000000000000000000002"
+        },
+        "Data": {
+          "$date": {
+            "$numberLong": "1666448592000"
+          }
+        },
+        "PreuTotal": 11,
+        "empleat_id": {
+          "$oid": "400000000000000000000006"
+        },
+        "TipusEntrega": "botiga",
+        "Productes": [
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000002"
+            },
+            "Quantitat": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "client_id": {
+      "$oid": "100000000000000000000004"
+    },
+    "Nom": "Angel",
+    "Cognoms": "Galera Fernandez",
+    "Adreça": "Girona 34, 4-5",
+    "CP": "08015",
+    "Localitat": "Barcelona",
+    "Provincia": "Barcelona",
+    "Telefon": "756999787",
+    "Comandes": [
+      {
+        "comanda_id": {
+          "$oid": "200000000000000000000005"
+        },
+        "botiga_id": {
+          "$oid": "300000000000000000000001"
+        },
+        "Data": {
+          "$date": {
+            "$numberLong": "1666269263000"
+          }
+        },
+        "PreuTotal": 10,
+        "empleat_id": {
+          "$oid": "400000000000000000000001"
+        },
+        "TipusEntrega": "botiga",
+        "Productes": [
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000001"
+            },
+            "Quantitat": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "client_id": {
+      "$oid": "100000000000000000000005"
+    },
+    "Nom": "Sonia",
+    "Cognoms": "Vazquez",
+    "Adreça": "Napoles 33, 2-1",
+    "CP": "08029",
+    "Localitat": "Santa Coloma de Gramanet",
+    "Provincia": "Barcelona",
+    "Telefon": "648111222",
+    "Comandes": [
+      {
+        "comanda_id": {
+          "$oid": "200000000000000000000003"
+        },
+        "botiga_id": {
+          "$oid": "300000000000000000000001"
+        },
+        "Data": {
+          "$date": {
+            "$numberLong": "1666267502000"
+          }
+        },
+        "PreuTotal": 31,
+        "empleat_id": {
+          "$oid": "400000000000000000000004"
+        },
+        "TipusEntrega": "repartiment",
+        "Productes": [
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000002"
+            },
+            "Quantitat": 1
+          },
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000005"
+            },
+            "Quantitat": 1
+          },
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000007"
+            },
+            "Quantitat": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "client_id": {
+      "$oid": "100000000000000000000006"
+    },
+    "Nom": "Ramon",
+    "Cognoms": "Turró Santana",
+    "Adreça": "Foc 45, 1-1",
+    "CP": "08033",
+    "Localitat": "Hospitalet",
+    "Provincia": "Barcelona",
+    "Telefon": "677446553",
+    "Comandes": [
+      {
+        "comanda_id": {
+          "$oid": "200000000000000000000006"
+        },
+        "botiga_id": {
+          "$oid": "300000000000000000000002"
+        },
+        "Data": {
+          "$date": {
+            "$numberLong": "1666205077000"
+          }
+        },
+        "PreuTotal": 6,
+        "empleat_id": {
+          "$oid": "400000000000000000000010"
+        },
+        "TipusEntrega": "repartiment",
+        "Productes": [
+          {
+            "producte_id": {
+              "$oid": "500000000000000000000006"
+            },
+            "Quantitat": 1
+          }
+        ]
+      }
+    ]
+  }
+]

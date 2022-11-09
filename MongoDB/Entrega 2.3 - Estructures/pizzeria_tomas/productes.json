@@ -1,6 +1,6 @@
 [
   {
-    "producte_id": {
+    "_id": {
       "$oid": "500000000000000000000001"
     },
     "Tipus": "Pizza",
@@ -11,7 +11,7 @@
     "CatPizza": "Petita"
   },
   {
-    "producte_id": {
+    "_id": {
       "$oid": "500000000000000000000002"
     },
     "Tipus": "Pizza",
@@ -22,7 +22,7 @@
     "CatPizza": "Mitjana"
   },
   {
-    "producte_id": {
+    "_id": {
       "$oid": "500000000000000000000003"
     },
     "Tipus": "Pizza",
@@ -33,7 +33,7 @@
     "CatPizza": "Gran"
   },
   {
-    "producte_id": {
+    "_id": {
       "$oid": "500000000000000000000004"
     },
     "Tipus": "Beguda",
@@ -44,7 +44,7 @@
     "CatPizza": ""
   },
   {
-    "producte_id": {
+    "_id": {
       "$oid": "500000000000000000000005"
     },
     "Tipus": "Beguda",
@@ -55,7 +55,7 @@
     "CatPizza": ""
   },
   {
-    "producte_id": {
+    "_id": {
       "$oid": "500000000000000000000006"
     },
     "Tipus": "Hamburguesa",
@@ -66,7 +66,7 @@
     "CatPizza": ""
   },
   {
-    "producte_id": {
+    "_id": {
       "$oid": "500000000000000000000007"
     },
     "Tipus": "Hamburguesa",

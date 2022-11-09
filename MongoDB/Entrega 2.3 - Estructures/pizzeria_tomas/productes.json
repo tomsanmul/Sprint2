@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "500000000000000000000001"
+  },
+  "Nom": "Tomas",
+  "Cognoms": "Sans Mulero",
+  "Adreça": "Gran Via 435, 2-2",
+  "CP": "08012",
+  "Localitat": "Barcelona",
+  "Provincia": "Barcelona",
+  "Telefon": "684563574"
+}]

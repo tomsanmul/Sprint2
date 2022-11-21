@@ -1,270 +1,155 @@
--- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
---
--- Host: 127.0.0.1    Database: youtube
--- ------------------------------------------------------
--- Server version	8.0.31
+DROP DATABASE IF EXISTS YOUTUBE;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE
+    IF NOT EXISTS `youtube`
+    /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */
+    /*!80016 DEFAULT ENCRYPTION='N' */
+;
 
---
--- Table structure for table `canal`
---
-
-DROP TABLE IF EXISTS `canal`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `canal` (
-  `id_canal` int NOT NULL AUTO_INCREMENT,
-  `id_usuari` int DEFAULT NULL,
-  `nom` varchar(45) DEFAULT NULL,
-  `descripcio` varchar(255) DEFAULT NULL,
-  `data` datetime DEFAULT NULL,
-  PRIMARY KEY (`id_canal`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `canal`
---
-
-LOCK TABLES `canal` WRITE;
-/*!40000 ALTER TABLE `canal` DISABLE KEYS */;
-/*!40000 ALTER TABLE `canal` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `comentaris`
---
-
-DROP TABLE IF EXISTS `comentaris`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `comentaris` (
-  `id_comentari` int NOT NULL AUTO_INCREMENT,
-  `id_usuari` int DEFAULT NULL,
-  `id_video` int DEFAULT NULL,
-  `comentari` varchar(255) DEFAULT NULL,
-  `data` datetime DEFAULT NULL,
-  PRIMARY KEY (`id_comentari`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `comentaris`
---
-
-LOCK TABLES `comentaris` WRITE;
-/*!40000 ALTER TABLE `comentaris` DISABLE KEYS */;
-/*!40000 ALTER TABLE `comentaris` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `etiquetas`
---
-
-DROP TABLE IF EXISTS `etiquetas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `etiquetas` (
-  `id_etiqueta` int NOT NULL AUTO_INCREMENT,
-  `id_video` int DEFAULT NULL,
-  `id_usuari` int DEFAULT NULL,
-  `nom` varchar(128) DEFAULT NULL,
-  `data` datetime DEFAULT NULL,
-  PRIMARY KEY (`id_etiqueta`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `etiquetas`
---
-
-LOCK TABLES `etiquetas` WRITE;
-/*!40000 ALTER TABLE `etiquetas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `etiquetas` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `historial_comentaris`
---
-
-DROP TABLE IF EXISTS `historial_comentaris`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `historial_comentaris` (
-  `id_historial_comentari` int NOT NULL AUTO_INCREMENT,
-  `id_comentari` int DEFAULT NULL,
-  `id_usuari` int DEFAULT NULL,
-  `estat` varchar(20) DEFAULT NULL,
-  `data` datetime DEFAULT NULL,
-  PRIMARY KEY (`id_historial_comentari`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `historial_comentaris`
---
-
-LOCK TABLES `historial_comentaris` WRITE;
-/*!40000 ALTER TABLE `historial_comentaris` DISABLE KEYS */;
-/*!40000 ALTER TABLE `historial_comentaris` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `historial_videos`
---
-
-DROP TABLE IF EXISTS `historial_videos`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `historial_videos` (
-  `id_historial_video` int NOT NULL AUTO_INCREMENT,
-  `id_video` int DEFAULT NULL,
-  `id_usuari` int DEFAULT NULL,
-  `estat` varchar(20) DEFAULT NULL,
-  `data` datetime DEFAULT NULL,
-  PRIMARY KEY (`id_historial_video`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `historial_videos`
---
-
-LOCK TABLES `historial_videos` WRITE;
-/*!40000 ALTER TABLE `historial_videos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `historial_videos` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `playlist`
---
-
-DROP TABLE IF EXISTS `playlist`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `playlist` (
-  `id_playlist` int NOT NULL AUTO_INCREMENT,
-  `id_usuari` int DEFAULT NULL,
-  `nom` varchar(45) DEFAULT NULL,
-  `data` datetime DEFAULT NULL,
-  `estat` varchar(12) DEFAULT NULL,
-  PRIMARY KEY (`id_playlist`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `playlist`
---
-
-LOCK TABLES `playlist` WRITE;
-/*!40000 ALTER TABLE `playlist` DISABLE KEYS */;
-/*!40000 ALTER TABLE `playlist` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usuari`
---
+USE `youtube`;
 
 DROP TABLE IF EXISTS `usuari`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `usuari` (
-  `ID_Usuari` int NOT NULL AUTO_INCREMENT,
-  `NomUsuari` varchar(45) DEFAULT NULL,
-  `Password` varchar(45) DEFAULT NULL,
-  `E-mail` varchar(100) DEFAULT NULL,
-  `DataNaixament` date DEFAULT NULL,
-  `Sexe` varchar(25) DEFAULT NULL,
-  `CP` varchar(12) DEFAULT NULL,
-  `Pais` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`ID_Usuari`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `usuari`
---
-
-LOCK TABLES `usuari` WRITE;
-/*!40000 ALTER TABLE `usuari` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usuari` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usuari_suscripcions`
---
-
-DROP TABLE IF EXISTS `usuari_suscripcions`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `usuari_suscripcions` (
-  `id_usuari_suscripcions` int NOT NULL AUTO_INCREMENT,
-  `id_usuari` int DEFAULT NULL,
-  `id_canal` int DEFAULT NULL,
-  PRIMARY KEY (`id_usuari_suscripcions`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usuari_suscripcions`
---
-
-LOCK TABLES `usuari_suscripcions` WRITE;
-/*!40000 ALTER TABLE `usuari_suscripcions` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usuari_suscripcions` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `videos`
---
+CREATE TABLE
+    `usuari` (
+        `ID_Usuari` int NOT NULL AUTO_INCREMENT,
+        `NomUsuari` varchar(45) DEFAULT NULL,
+        `Password` varchar(45) DEFAULT NULL,
+        `E-mail` varchar(100) DEFAULT NULL,
+        `DataNaixament` date DEFAULT NULL,
+        `Sexe` varchar(25) DEFAULT NULL,
+        `CP` varchar(12) DEFAULT NULL,
+        `Pais` varchar(45) DEFAULT NULL,
+        PRIMARY KEY (`ID_Usuari`)
+    );
 
 DROP TABLE IF EXISTS `videos`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `videos` (
-  `id_Video` int NOT NULL AUTO_INCREMENT,
-  `id_usuari` int DEFAULT NULL,
-  `titol` varchar(45) DEFAULT NULL,
-  `nom_Arxiu` varchar(45) DEFAULT NULL,
-  `descripcio` varchar(45) DEFAULT NULL,
-  `grandaria` bigint DEFAULT NULL,
-  `durada` int DEFAULT NULL,
-  `data` datetime DEFAULT NULL,
-  `thumbnail` varchar(45) DEFAULT NULL,
-  `reproduccions` int DEFAULT NULL,
-  `likes` int DEFAULT NULL,
-  `dislikes` int DEFAULT NULL,
-  `estat` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`id_Video`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `videos`
---
+CREATE TABLE
+    `videos` (
+        `id_Video` int NOT NULL AUTO_INCREMENT,
+        `id_usuari` int DEFAULT NULL,
+        `titol` varchar(45) DEFAULT NULL,
+        `nom_Arxiu` varchar(45) DEFAULT NULL,
+        `descripcio` varchar(45) DEFAULT NULL,
+        `grandaria` bigint DEFAULT NULL,
+        `durada` int DEFAULT NULL,
+        `data` datetime DEFAULT NULL,
+        `thumbnail` varchar(45) DEFAULT NULL,
+        `reproduccions` int DEFAULT NULL,
+        `estat` varchar(15) DEFAULT NULL,
+        PRIMARY KEY (`id_Video`),
+        FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`)
+    );
 
-LOCK TABLES `videos` WRITE;
-/*!40000 ALTER TABLE `videos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `videos` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+DROP TABLE IF EXISTS `canal`;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+CREATE TABLE
+    `canal` (
+        `id_canal` int NOT NULL AUTO_INCREMENT,
+        `id_usuari` int DEFAULT NULL,
+        `id_video` int DEFAULT NULL,
+        `nom` varchar(45) DEFAULT NULL,
+        `descripcio` varchar(255) DEFAULT NULL,
+        `data` datetime DEFAULT NULL,
+        PRIMARY KEY (`id_canal`),
+        FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`),
+        FOREIGN KEY (`id_video`) REFERENCES `videos`(`id_video`)
+    );
 
--- Dump completed on 2022-11-02  1:58:23
+DROP TABLE IF EXISTS `comentaris`;
+
+CREATE TABLE
+    `comentaris` (
+        `id_comentari` int NOT NULL AUTO_INCREMENT,
+        `id_usuari` int DEFAULT NULL,
+        `id_video` int DEFAULT NULL,
+        `comentari` varchar(255) DEFAULT NULL,
+        `data` datetime DEFAULT NULL,
+        PRIMARY KEY (`id_comentari`),
+        FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`),
+        FOREIGN KEY (`id_video`) REFERENCES `videos`(`id_video`)
+    );
+
+DROP TABLE IF EXISTS `historial_comentaris`;
+
+CREATE TABLE
+    `historial_comentaris` (
+        `id_historial_comentari` int NOT NULL AUTO_INCREMENT,
+        `id_comentari` int DEFAULT NULL,
+        `id_usuari` int DEFAULT NULL,
+        `estat` varchar(20) DEFAULT NULL,
+        `data` datetime DEFAULT NULL,
+        PRIMARY KEY (`id_historial_comentari`),
+        FOREIGN KEY (`id_comentari`) REFERENCES `comentaris`(`id_comentari`),
+        FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`)
+    );
+
+DROP TABLE IF EXISTS `etiquetas`;
+
+CREATE TABLE
+    `etiquetas` (
+        `id_etiqueta` int NOT NULL AUTO_INCREMENT,
+        `id_video` int DEFAULT NULL,
+        `id_usuari` int DEFAULT NULL,
+        `nom` varchar(128) DEFAULT NULL,
+        `data` datetime DEFAULT NULL,
+        PRIMARY KEY (`id_etiqueta`),
+        FOREIGN KEY (`id_video`) REFERENCES `videos`(`id_video`),
+        FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`)
+    );
+
+DROP TABLE IF EXISTS `historial_videos`;
+
+CREATE TABLE
+    `historial_videos` (
+        `id_historial_video` int NOT NULL AUTO_INCREMENT,
+        `id_video` int DEFAULT NULL,
+        `id_usuari` int DEFAULT NULL,
+        `estat` varchar(20) DEFAULT NULL,
+        `data` datetime DEFAULT NULL,
+        PRIMARY KEY (`id_historial_video`),
+        FOREIGN KEY (`id_video`) REFERENCES `videos`(`id_video`),
+        FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`)
+    );
+
+DROP TABLE IF EXISTS `like_dislike_comentaris`;
+
+CREATE TABLE
+    `like_dislike_comentaris` (
+        `id_like_dislike_comentari` int NOT NULL,
+        `id_usuari` int DEFAULT NULL,
+        `id_comentari` int DEFAULT NULL,
+        `like_o_dislike_comentari` enum('like', 'dislike') DEFAULT NULL,
+        `date` datetime DEFAULT NULL,
+        PRIMARY KEY (`id_like_dislike_comentari`),
+        FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`),
+        FOREIGN KEY (`id_comentari`) REFERENCES `comentaris`(`id_comentari`)
+    );
+
+DROP TABLE IF EXISTS `playlist`;
+
+CREATE TABLE
+    `playlist` (
+        `id_playlist` int NOT NULL AUTO_INCREMENT,
+        `id_video` int DEFAULT NULL,
+        `id_usuari` int DEFAULT NULL,
+        `nom` varchar(45) DEFAULT NULL,
+        `data` datetime DEFAULT NULL,
+        `estat` varchar(12) DEFAULT NULL,
+        PRIMARY KEY (`id_playlist`),
+        FOREIGN KEY (`id_video`) REFERENCES `videos`(`id_video`),
+        FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`)
+    );
+
+DROP TABLE IF EXISTS `usuari_suscripcions`;
+
+CREATE TABLE
+    `usuari_suscripcions` (
+        `id_usuari_suscripcions` int NOT NULL AUTO_INCREMENT,
+        `id_usuari` int DEFAULT NULL,
+        `id_canal` int DEFAULT NULL,
+        PRIMARY KEY (`id_usuari_suscripcions`),
+        FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`),
+        FOREIGN KEY (`id_canal`) REFERENCES `canal`(`id_canal`)
+    );

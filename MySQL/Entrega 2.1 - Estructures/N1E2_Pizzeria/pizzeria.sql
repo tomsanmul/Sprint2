@@ -1,10 +1,6 @@
 DROP DATABASE IF EXISTS `pizzeria`;
 
-CREATE DATABASE
-    IF NOT EXISTS `pizzeria`
-    /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */
-    /*!80016 DEFAULT ENCRYPTION='N' */
-;
+CREATE DATABASE IF NOT EXISTS `pizzeria`;
 
 USE `pizzeria`;
 
@@ -19,7 +15,7 @@ CREATE TABLE
         `Localitat` varchar(60) DEFAULT NULL,
         `Província` varchar(45) DEFAULT NULL,
         PRIMARY KEY (`ID_Botiga`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 9 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+    );
 
 DROP TABLE IF EXISTS `categoriapizza`;
 
@@ -28,7 +24,7 @@ CREATE TABLE
         `ID_CategoriaPizza` int NOT NULL AUTO_INCREMENT,
         `Categoria` varchar(45) DEFAULT NULL,
         PRIMARY KEY (`ID_CategoriaPizza`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 6 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+    );
 
 DROP TABLE IF EXISTS `client`;
 
@@ -43,33 +39,7 @@ CREATE TABLE
         `Provincia` varchar(45) DEFAULT NULL,
         `Telefon` varchar(20) DEFAULT NULL,
         PRIMARY KEY (`ID_Client`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 7 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
-
-DROP TABLE IF EXISTS `comanda`;
-
-CREATE TABLE
-    `comanda` (
-        `ID_Comanda` int NOT NULL AUTO_INCREMENT,
-        `ID_Client` int DEFAULT NULL,
-        `ID_Botiga` int DEFAULT NULL,
-        `ID_Empleat` int DEFAULT NULL,
-        `TipusEntrega` varchar(25) DEFAULT NULL,
-        `DataComanda` datetime DEFAULT NULL,
-        `PreuTotal` float DEFAULT NULL,
-        PRIMARY KEY (`ID_Comanda`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 7 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
-
-DROP TABLE IF EXISTS `detallcomanda`;
-
-CREATE TABLE
-    `detallcomanda` (
-        `ID_DetallComanda` int NOT NULL AUTO_INCREMENT,
-        `ID_Comanda` int DEFAULT NULL,
-        `ID_Producte` int DEFAULT NULL,
-        `Quantitat` int DEFAULT NULL,
-        `Preu` float DEFAULT NULL,
-        PRIMARY KEY (`ID_DetallComanda`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 12 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+    );
 
 DROP TABLE IF EXISTS `empleat`;
 
@@ -87,8 +57,26 @@ CREATE TABLE
         `Cognoms` varchar(45) DEFAULT NULL,
         `NIF` varchar(12) DEFAULT NULL,
         `Telefon` varchar(20) DEFAULT NULL,
-        PRIMARY KEY (`ID_Empleat`)
-    ) ENGINE = InnoDB AUTO_INCREMENT = 11 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+        PRIMARY KEY (`ID_Empleat`),
+        FOREIGN KEY (`ID_Botiga`) REFERENCES `botiga`(`ID_Botiga`)
+    );
+
+DROP TABLE IF EXISTS `comanda`;
+
+CREATE TABLE
+    `comanda` (
+        `ID_Comanda` int NOT NULL AUTO_INCREMENT,
+        `ID_Client` int DEFAULT NULL,
+        `ID_Botiga` int DEFAULT NULL,
+        `ID_Empleat` int DEFAULT NULL,
+        `TipusEntrega` varchar(25) DEFAULT NULL,
+        `DataComanda` datetime DEFAULT NULL,
+        `PreuTotal` float DEFAULT NULL,
+        PRIMARY KEY (`ID_Comanda`),
+        FOREIGN KEY (`ID_Client`) REFERENCES `client`(`ID_Client`),
+        FOREIGN KEY (`ID_Botiga`) REFERENCES `botiga`(`ID_Botiga`),
+        FOREIGN KEY (`ID_Empleat`) REFERENCES `empleat`(`ID_Empleat`)
+    );
 
 DROP TABLE IF EXISTS `producte`;
 
@@ -105,12 +93,26 @@ CREATE TABLE
         `Descripcio` varchar(256) DEFAULT NULL,
         `Imatge` varchar(45) DEFAULT NULL,
         `Preu` float DEFAULT NULL,
-        PRIMARY KEY (`ID_Producte`)
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+        PRIMARY KEY (`ID_Producte`),
+        FOREIGN KEY (`ID_CategoriaPizza`) REFERENCES `categoriapizza`(`ID_CategoriaPizza`)
+    );
 
-LOCK TABLES `botiga` WRITE;
+DROP TABLE IF EXISTS `detallcomanda`;
 
-INSERT INTO `botiga`
+CREATE TABLE
+    `detallcomanda` (
+        `ID_DetallComanda` int NOT NULL AUTO_INCREMENT,
+        `ID_Comanda` int DEFAULT NULL,
+        `ID_Producte` int DEFAULT NULL,
+        `Quantitat` int DEFAULT NULL,
+        `Preu` float DEFAULT NULL,
+        PRIMARY KEY (`ID_DetallComanda`),
+        FOREIGN KEY (`ID_Comanda`) REFERENCES `comanda`(`ID_Comanda`),
+        FOREIGN KEY (`ID_Producte`) REFERENCES `producte`(`ID_Producte`)
+    );
+
+INSERT INTO
+    `botiga`
 VALUES (
         1,
         'Pi',
@@ -169,10 +171,6 @@ VALUES (
         'Barcelona'
     );
 
-UNLOCK TABLES;
-
-LOCK TABLES `client` WRITE;
-
 INSERT INTO `client`
 VALUES (
         1,
@@ -230,78 +228,8 @@ VALUES (
         '677446553'
     );
 
-UNLOCK TABLES;
-
-LOCK TABLES `categoriapizza` WRITE;
-
 INSERT INTO `categoriapizza`
 VALUES (1, 'Petita'), (2, 'Mitjana'), (3, 'Gran'), (4, 'Superior'), (5, 'Supreme');
-
-UNLOCK TABLES;
-
-LOCK TABLES `comanda` WRITE;
-
-INSERT INTO `comanda`
-VALUES (
-        1,
-        1,
-        1,
-        1,
-        'botiga',
-        '2022-10-19 17:45:13',
-        22
-    ), (
-        2,
-        2,
-        1,
-        4,
-        'repartiment',
-        '2022-10-21 19:34:11',
-        13
-    ), (
-        3,
-        5,
-        1,
-        4,
-        'repartiment',
-        '2022-10-20 12:05:02',
-        31
-    ), (
-        4,
-        3,
-        2,
-        6,
-        'botiga',
-        '2022-10-22 14:23:12',
-        11
-    ), (
-        5,
-        4,
-        1,
-        1,
-        'botiga',
-        '2022-10-20 12:34:23',
-        10
-    ), (
-        6,
-        6,
-        2,
-        10,
-        'repartiment',
-        '2022-10-19 18:44:37',
-        6
-    );
-
-UNLOCK TABLES;
-
-LOCK TABLES `detallcomanda` WRITE;
-
-INSERT INTO `detallcomanda`
-VALUES (1, 1, 1, 1, 10), (2, 1, 4, 2, 6), (3, 1, 6, 1, 6), (4, 2, 3, 1, 10), (5, 2, 4, 1, 3), (6, 3, 2, 1, 11), (7, 3, 5, 1, 4), (8, 3, 7, 2, 16), (9, 4, 2, 1, 11), (10, 5, 1, 1, 10), (11, 6, 6, 1, 6);
-
-UNLOCK TABLES;
-
-LOCK TABLES `empleat` WRITE;
 
 INSERT INTO `empleat`
 VALUES (
@@ -386,10 +314,6 @@ VALUES (
         '666777444'
     );
 
-UNLOCK TABLES;
-
-LOCK TABLES `producte` WRITE;
-
 INSERT INTO `producte`
 VALUES (
         1,
@@ -449,4 +373,56 @@ VALUES (
         8
     );
 
-UNLOCK TABLES;
+INSERT INTO `comanda`
+VALUES (
+        1,
+        1,
+        1,
+        1,
+        'botiga',
+        '2022-10-19 17:45:13',
+        22
+    ), (
+        2,
+        2,
+        1,
+        4,
+        'repartiment',
+        '2022-10-21 19:34:11',
+        13
+    ), (
+        3,
+        5,
+        1,
+        4,
+        'repartiment',
+        '2022-10-20 12:05:02',
+        31
+    ), (
+        4,
+        3,
+        2,
+        6,
+        'botiga',
+        '2022-10-22 14:23:12',
+        11
+    ), (
+        5,
+        4,
+        1,
+        1,
+        'botiga',
+        '2022-10-20 12:34:23',
+        10
+    ), (
+        6,
+        6,
+        2,
+        10,
+        'repartiment',
+        '2022-10-19 18:44:37',
+        6
+    );
+
+INSERT INTO `detallcomanda`
+VALUES (1, 1, 1, 1, 10), (2, 1, 4, 2, 6), (3, 1, 6, 1, 6), (4, 2, 3, 1, 10), (5, 2, 4, 1, 3), (6, 3, 2, 1, 11), (7, 3, 5, 1, 4), (8, 3, 7, 2, 16), (9, 4, 2, 1, 11), (10, 5, 1, 1, 10), (11, 6, 6, 1, 6);

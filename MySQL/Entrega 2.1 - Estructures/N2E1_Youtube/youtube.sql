@@ -17,7 +17,7 @@ CREATE TABLE
         `Password` varchar(45) DEFAULT NULL,
         `E-mail` varchar(100) DEFAULT NULL,
         `DataNaixament` date DEFAULT NULL,
-        `Sexe` varchar(25) DEFAULT NULL,
+        `Sexe` enum('Home', 'Dona') DEFAULT NULL,
         `CP` varchar(12) DEFAULT NULL,
         `Pais` varchar(45) DEFAULT NULL,
         PRIMARY KEY (`ID_Usuari`)
@@ -37,7 +37,7 @@ CREATE TABLE
         `data` datetime DEFAULT NULL,
         `thumbnail` varchar(45) DEFAULT NULL,
         `reproduccions` int DEFAULT NULL,
-        `estat` varchar(15) DEFAULT NULL,
+        `estat` tinyint DEFAULT NULL,
         PRIMARY KEY (`id_Video`),
         FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`)
     );
@@ -153,3 +153,168 @@ CREATE TABLE
         FOREIGN KEY (`id_usuari`) REFERENCES `usuari`(`id_usuari`),
         FOREIGN KEY (`id_canal`) REFERENCES `canal`(`id_canal`)
     );
+
+INSERT INTO `usuari`
+VALUES (
+        1,
+        'Tomas',
+        '123456',
+        'tomas@gmail.com',
+        '1988-10-20',
+        'Home',
+        '08012',
+        'España'
+    ), (
+        2,
+        'Maria',
+        '654321',
+        'maria@gmail.com',
+        '1999-09-12',
+        'Dona',
+        '28809',
+        'España'
+    ), (
+        3,
+        'Carlos',
+        'a1s2d3',
+        'carlos@gmail.com',
+        '2000-06-04',
+        'Home',
+        '19273',
+        'España'
+    );
+
+INSERT INTO `videos`
+VALUES (
+        1,
+        1,
+        'video_gos',
+        'gos.avi',
+        'gos corrent per el camp',
+        20,
+        400,
+        '2022-10-20 12:05:02',
+        'gos.thumb',
+        5,
+        1
+    ), (
+        2,
+        1,
+        'video_gat',
+        'gat.vi',
+        'gat corrent per casa',
+        14,
+        300,
+        '2022-10-16 15:02:05',
+        'gat.thumb',
+        8,
+        1
+    ), (
+        3,
+        2,
+        'video_coche ',
+        'cotxe.avi',
+        'cotxe demostracio',
+        21,
+        450,
+        '2021-09-06 18:42:15',
+        'cotxe.thumb',
+        2,
+        1
+    );
+
+INSERT INTO
+    `historial_videos`
+VALUES (
+        1,
+        1,
+        1,
+        '1',
+        '2022-10-09 00:00:00'
+    );
+
+INSERT INTO `canal`
+VALUES (
+        1,
+        1,
+        1,
+        'Canal d\'Animals',
+        'Animals corrents',
+        '2022-10-11 00:00:00'
+    ), (
+        2,
+        2,
+        3,
+        'Canal Cotxes',
+        'videos de cotxes',
+        '2022-10-09 00:00:00'
+    );
+
+INSERT INTO `playlist`
+VALUES (
+        1,
+        1,
+        1,
+        'Animals',
+        '2022-10-10 00:00:00',
+        '1'
+    ), (
+        2,
+        3,
+        2,
+        'Cotxes',
+        '2022-10-09 00:00:00',
+        NULL
+    );
+
+INSERT INTO `etiquetas`
+VALUES (
+        1,
+        1,
+        1,
+        'Primera etiqueta',
+        '2022-10-10 00:00:00'
+    ), (
+        2,
+        3,
+        2,
+        'Etiquetan video',
+        '2022-10-09 00:00:00'
+    );
+
+INSERT INTO `comentaris`
+VALUES (
+        1,
+        2,
+        1,
+        'Aquest video m\'agrada molt',
+        '2022-10-09 00:00:00'
+    ), (
+        2,
+        1,
+        2,
+        'Bon video!',
+        '2022-10-07 00:00:00'
+    );
+
+INSERT INTO
+    `historial_comentaris`
+VALUES (
+        1,
+        1,
+        1,
+        '1',
+        '2022-10-09 00:00:00'
+    );
+
+INSERT INTO
+    `like_dislike_comentaris`
+VALUES (
+        1,
+        1,
+        1,
+        'like',
+        '2022-10-10 00:00:00'
+    );
+
+INSERT INTO `usuari_suscripcions` VALUES (1,2,1);

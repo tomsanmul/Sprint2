@@ -1,3 +1,4 @@
+-- Active: 1673949372673@@127.0.0.1@3306@tienda
 SELECT nombre FROM tienda.producto;
 SELECT nombre, precio FROM tienda.producto;
 SELECT * FROM tienda.producto;

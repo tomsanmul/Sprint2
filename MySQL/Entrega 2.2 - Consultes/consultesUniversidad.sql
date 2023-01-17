@@ -1,3 +1,4 @@
+-- Active: 1673949372673@@127.0.0.1@3306@universidad
 SELECT apellido1, apellido2, nombre FROM universidad.persona WHERE tipo = 'alumno' ORDER BY apellido1, apellido2, nombre;
 SELECT nombre, apellido1, apellido2 FROM universidad.persona WHERE tipo = 'alumno' AND ISNULL(telefono) ORDER BY apellido1, apellido2, nombre;
 SELECT nombre, apellido1, apellido2 FROM universidad.persona WHERE tipo = 'alumno' AND YEAR(fecha_nacimiento) = '1999' ORDER BY apellido1, apellido2, nombre;

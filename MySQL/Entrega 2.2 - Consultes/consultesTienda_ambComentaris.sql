@@ -1,4 +1,4 @@
--- Active: 1666904461314@@127.0.0.1@3306@tienda
+-- Active: 1673949372673@@127.0.0.1@3306@optica
 
 -- 1. Llista el nom de tots els productes que hi ha en la taula producto.
 SELECT nombre FROM tienda.producto;

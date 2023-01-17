@@ -1,4 +1,4 @@
--- Active: 1666904461314@@127.0.0.1@3306@optica
+-- Active: 1673949372673@@127.0.0.1@3306@optica
 
 -- 1. Llista el total de compres d’un client/a.
 SELECT v.`ID_Venda`, v.`DataVenda`, v.`ID_Ulleres`, u.`Marca`, c.`ID_Client`, c.`Nom` as 'Nom Client', c.`NIF` FROM  vendes v INNER JOIN clients c ON v.`ID_Client` = c.`ID_Client` INNER JOIN ulleres u ON v.`ID_Ulleres` = u.`ID_Ulleres` WHERE c.`Nom` = 'Javier Ramirez' ;
